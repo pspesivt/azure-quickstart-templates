@@ -93,7 +93,7 @@
     "nicName": "[concat(parameters('customVmName'),'Nic')]",
     "publicIPAddressType": "Dynamic",
     "apiVersion": "2015-06-15",
-    "templatelink": "[concat('https://raw.githubusercontent.com/singhkay/azure-quickstart-templates/master/101-vm-from-user-image/',parameters('newOrExistingVnet'),'vnet.json')]"
+    "templatelink": "[concat('https://raw.githubusercontent.com/pspesivt/azure-quickstart-templates/master/101-vm-from-user-image/',parameters('newOrExistingVnet'),'vnet.json')]"
   },
   "resources": [
     {
@@ -197,8 +197,7 @@
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
-            "enabled": "false",
-            "storageUri": "[concat(reference(resourceId(parameters('userImageStorageAccountResourceGroupName'), 'Microsoft.Storage/storageAccounts/', parameters('userImageStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob)]"
+            "enabled": "false"
           }
         }
       }
